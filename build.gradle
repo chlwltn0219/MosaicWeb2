@@ -7,6 +7,10 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		/*
+		 *	3. SpringLoaded 설정
+		 */
+		classpath("org.springframework:springloaded:1.2.6.RELEASE")
 	}
 }
 
@@ -39,6 +43,10 @@ dependencies {
 	 *	1. JSP 설정
 	 */
 	providedRuntime group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
+	/*
+	 *	2. SpringLoaded 설정
+	 */
+	compile group: 'org.springframework', name: 'springloaded', version: '1.2.6.RELEASE'
 	
 }
 
