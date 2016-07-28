@@ -38,6 +38,10 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         out.println("Remote Addr = " + request.getRemoteAddr());
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 94ddfa6d7696553dc96ba547e3453702db10f96f
         for(int i=0; i<10; i++) {
         	out.println("<h1>HelloServlet 실행 확인</h1>");
         }
