@@ -7,6 +7,8 @@
 <title>Hello.jsp</title>
 </head>
 <body>
-<h1>Hello.jsp 작동 확인</h1>
+<% for(int i=0; i<10; i++) { %>
+<h1>Hello.jsp 작동 확인 i = <%= i %></h1>
+<% } %>
 </body>
 </html>

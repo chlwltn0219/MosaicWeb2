@@ -19,6 +19,8 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 
+apply plugin: 'application'
+mainClassName = 'com.hybrid.fx.MainApplication'
 
 war {
 	baseName = 'MosaicWeb2'
@@ -29,6 +31,10 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	jcenter()
+    maven {
+        url 'http://nexus.gluonhq.com/nexus/content/repositories/releases'
+    }
 }
 
 configurations {
@@ -52,7 +58,8 @@ dependencies {
 	 */
 	compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.1.1'
 	compile files ('src/main/webapp/WEB-INF/lib/ojdbc7.jar')
-	 
+	
+	compile 'com.gluonhq:particle:1.1.0'
 }
 
 
